@@ -17,7 +17,7 @@ namespace RandomSelectorForQuestions
         static public void reset() { instance.x = instance.seed; instance.tot = 0; }
         static public long getSeed() { return instance.tot; }
         static public int getNext() {
-            instance.x = ( instance.x * 314159269+ 453806245 )% 2147483648;
+            instance.x = ( instance.x * 314159269 + 453806245 ) % 2147483648;
             instance.tot++;
             return (int)instance.x; 
         }
