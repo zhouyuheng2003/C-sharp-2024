@@ -7,7 +7,11 @@
       "RelativeMoniker": "D:0:0:{5205FC2A-DFDE-46B7-B8C7-AE218BBE44A3}|RandomSelectorForQuestions.csproj|solutionrelative:window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5205FC2A-DFDE-46B7-B8C7-AE218BBE44A3}|RandomSelectorForQuestions.csproj|d:\\\u5927\u5B66\u8BFE\u7A0B\\0-workspace\\c-sharp-2024\\randomselectorforquestions\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5205FC2A-DFDE-46B7-B8C7-AE218BBE44A3}|RandomSelectorForQuestions.csproj|D:\\\u5927\u5B66\u8BFE\u7A0B\\0-WorkSpace\\C-sharp-2024\\RandomSelectorForQuestions\\dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5205FC2A-DFDE-46B7-B8C7-AE218BBE44A3}|RandomSelectorForQuestions.csproj|solutionrelative:dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5205FC2A-DFDE-46B7-B8C7-AE218BBE44A3}|RandomSelectorForQuestions.csproj|D:\\\u5927\u5B66\u8BFE\u7A0B\\0-WorkSpace\\C-sharp-2024\\RandomSelectorForQuestions\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5205FC2A-DFDE-46B7-B8C7-AE218BBE44A3}|RandomSelectorForQuestions.csproj|solutionrelative:window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -15,15 +19,11 @@
       "RelativeMoniker": "D:0:0:{5205FC2A-DFDE-46B7-B8C7-AE218BBE44A3}|RandomSelectorForQuestions.csproj|solutionrelative:randomnumbergenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5205FC2A-DFDE-46B7-B8C7-AE218BBE44A3}|RandomSelectorForQuestions.csproj|d:\\\u5927\u5B66\u8BFE\u7A0B\\0-workspace\\c-sharp-2024\\randomselectorforquestions\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5205FC2A-DFDE-46B7-B8C7-AE218BBE44A3}|RandomSelectorForQuestions.csproj|D:\\\u5927\u5B66\u8BFE\u7A0B\\0-WorkSpace\\C-sharp-2024\\RandomSelectorForQuestions\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5205FC2A-DFDE-46B7-B8C7-AE218BBE44A3}|RandomSelectorForQuestions.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5205FC2A-DFDE-46B7-B8C7-AE218BBE44A3}|RandomSelectorForQuestions.csproj|d:\\\u5927\u5B66\u8BFE\u7A0B\\0-workspace\\c-sharp-2024\\randomselectorforquestions\\dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5205FC2A-DFDE-46B7-B8C7-AE218BBE44A3}|RandomSelectorForQuestions.csproj|solutionrelative:dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5205FC2A-DFDE-46B7-B8C7-AE218BBE44A3}|RandomSelectorForQuestions.csproj|d:\\\u5927\u5B66\u8BFE\u7A0B\\0-workspace\\c-sharp-2024\\randomselectorforquestions\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5205FC2A-DFDE-46B7-B8C7-AE218BBE44A3}|RandomSelectorForQuestions.csproj|D:\\\u5927\u5B66\u8BFE\u7A0B\\0-WorkSpace\\C-sharp-2024\\RandomSelectorForQuestions\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5205FC2A-DFDE-46B7-B8C7-AE218BBE44A3}|RandomSelectorForQuestions.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -49,12 +49,11 @@
               "ToolTip": "D:\\\u5927\u5B66\u8BFE\u7A0B\\0-WorkSpace\\C-sharp-2024\\RandomSelectorForQuestions\\Form1.cs [\u8BBE\u8BA1]",
               "RelativeToolTip": "Form1.cs [\u8BBE\u8BA1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T11:33:13.45Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
+              "WhenOpened": "2024-10-13T11:33:13.45Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "D:\\\u5927\u5B66\u8BFE\u7A0B\\0-WorkSpace\\C-sharp-2024\\RandomSelectorForQuestions\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
@@ -62,8 +61,7 @@
               "RelativeToolTip": "Form1.Designer.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAAAEUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T10:32:09.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-13T10:32:09.42Z"
             },
             {
               "$type": "Document",
@@ -73,39 +71,38 @@
               "RelativeDocumentMoniker": "Window.cs",
               "ToolTip": "D:\\\u5927\u5B66\u8BFE\u7A0B\\0-WorkSpace\\C-sharp-2024\\RandomSelectorForQuestions\\Window.cs",
               "RelativeToolTip": "Window.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAABwAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAIwEQAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T10:30:57.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Window.cs [\u8BBE\u8BA1]",
               "DocumentMoniker": "D:\\\u5927\u5B66\u8BFE\u7A0B\\0-WorkSpace\\C-sharp-2024\\RandomSelectorForQuestions\\Window.cs",
               "RelativeDocumentMoniker": "Window.cs",
               "ToolTip": "D:\\\u5927\u5B66\u8BFE\u7A0B\\0-WorkSpace\\C-sharp-2024\\RandomSelectorForQuestions\\Window.cs [\u8BBE\u8BA1]",
               "RelativeToolTip": "Window.cs [\u8BBE\u8BA1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T10:30:24.938Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
+              "WhenOpened": "2024-10-13T10:30:24.938Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "DataLoader.cs",
               "DocumentMoniker": "D:\\\u5927\u5B66\u8BFE\u7A0B\\0-WorkSpace\\C-sharp-2024\\RandomSelectorForQuestions\\DataLoader.cs",
               "RelativeDocumentMoniker": "DataLoader.cs",
               "ToolTip": "D:\\\u5927\u5B66\u8BFE\u7A0B\\0-WorkSpace\\C-sharp-2024\\RandomSelectorForQuestions\\DataLoader.cs",
               "RelativeToolTip": "DataLoader.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T10:05:12.078Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "RandomNumberGenerator.cs",
               "DocumentMoniker": "D:\\\u5927\u5B66\u8BFE\u7A0B\\0-WorkSpace\\C-sharp-2024\\RandomSelectorForQuestions\\RandomNumberGenerator.cs",
               "RelativeDocumentMoniker": "RandomNumberGenerator.cs",
@@ -113,8 +110,7 @@
               "RelativeToolTip": "RandomNumberGenerator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T16:52:59.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T16:52:59.341Z"
             },
             {
               "$type": "Document",
@@ -126,8 +122,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T16:52:43.373Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T16:52:43.373Z"
             }
           ]
         }

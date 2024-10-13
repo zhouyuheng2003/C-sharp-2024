@@ -55,6 +55,7 @@ namespace RandomSelectorForQuestions
         // 加载题库下拉框数据
         private void LoadComboBoxData()
         {
+            comboBoxFolders.Items.Add("all");
             foreach (var folder in dataLoader.GetFolders())
             {
                 Console.WriteLine(folder);
@@ -71,10 +72,13 @@ namespace RandomSelectorForQuestions
             string selectedFolder = comboBoxFolders.SelectedItem.ToString();
             Console.WriteLine(selectedFolder);
             int problemCount = dataLoader.GetProblemCount(selectedFolder);
+
+            // 这行代码之后要改成老虎的Rand
             int randomIndex = random.Next(0, problemCount);
+
             string question = dataLoader.Get(selectedFolder, randomIndex);
             labelQuestion.Text = question; // 更新 Label 的文本
-            
+
         }
     }
 }
