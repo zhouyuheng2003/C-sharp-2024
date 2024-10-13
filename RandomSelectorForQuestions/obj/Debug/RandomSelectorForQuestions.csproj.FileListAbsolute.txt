@@ -20,3 +20,4 @@ D:\大学课程\0-WorkSpace\C-sharp-2024\RandomSelectorForQuestions\obj\Debug\Ra
 D:\大学课程\0-WorkSpace\C-sharp-2024\RandomSelectorForQuestions\obj\Debug\RandomSelectorForQuestions.exe
 D:\大学课程\0-WorkSpace\C-sharp-2024\RandomSelectorForQuestions\obj\Debug\RandomSelectorForQuestions.pdb
 D:\大学课程\0-WorkSpace\C-sharp-2024\RandomSelectorForQuestions\obj\Debug\RandomSelectorForQuestions.Window.resources
+K:\Tyven\003-ForEnglishPath\GithubRepositories\Csharp2024\RandomSelectorForQuestions\obj\Debug\RandomSelectorForQuestions.Window.resources
