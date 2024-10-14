@@ -123,6 +123,15 @@ namespace RandomSelectorForQuestions
             }
             return 0;
         }
+        public void ReSet()
+        {
+            seeds = new Random().Next(0, 10000);
+            foreach (var folder in folders)
+            {
+                used_for_problemset[folder] = 0;
+            }
+            WriteData();
+        }
         public string Get(string folder){
             int index = -1;
             if (folder == "all")

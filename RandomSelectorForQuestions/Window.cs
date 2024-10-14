@@ -12,7 +12,7 @@ namespace RandomSelectorForQuestions
         private DataLoader dataLoader;
         private Dictionary<string, string[]> problemData;
         private ComboBox comboBoxFolders;
-        private Button buttonNext, buttonLocation;
+        private Button buttonNext, buttonLocation, buttonReset;
         private RichTextBox richTextBoxQuestion; // 替换为 RichTextBox
         private Random random;
         private string dataPath;
@@ -44,6 +44,14 @@ namespace RandomSelectorForQuestions
             buttonNext.Width = 60;
             buttonNext.Click += ButtonNext_Click;
             this.Controls.Add(buttonNext);
+
+            // 初始化 buttonReset
+            buttonReset = new Button();
+            buttonReset.Text = "重置";
+            buttonReset.Location = new System.Drawing.Point(500, 21);
+            buttonReset.Width = 60;
+            buttonReset.Click += ButtonReset_Click;
+            this.Controls.Add(buttonReset);
 
             // 初始化 buttonLocation
             buttonLocation = new Button();
@@ -108,6 +116,10 @@ namespace RandomSelectorForQuestions
             
             
            
+        }
+        private void ButtonReset_Click(object sender, EventArgs e)
+        {
+            dataLoader.ReSet();
         }
         public void SetText(RichTextBox rtb, string question)
         {
