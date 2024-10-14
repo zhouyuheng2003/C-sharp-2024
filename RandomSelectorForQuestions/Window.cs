@@ -21,6 +21,7 @@ namespace RandomSelectorForQuestions
         {
             InitializeComponent();
             random = new Random();
+            RandomNumberGenerator.init();
         }
 
         private void Window_Load(object sender, EventArgs e)
@@ -91,17 +92,18 @@ namespace RandomSelectorForQuestions
                 comboBoxFolders.SelectedIndex = 0; // 默认选择第一个题库
             }
         }
+        
 
         private void ButtonNext_Click(object sender, EventArgs e)
         {
             string selectedFolder = comboBoxFolders.SelectedItem.ToString().Replace("题库：", "");
             Console.WriteLine(selectedFolder);
-            int problemCount = dataLoader.GetProblemCount(selectedFolder);
+            int problemCount = dataLoader.GetProblemCount(selectedFolder);//获取题库的题目数量
 
             // 这行代码之后要改成老虎的Rand
-            int randomIndex = random.Next(0, problemCount);
+            //int randomIndex = random.Next(0, problemCount);
 
-            string question = dataLoader.Get(selectedFolder, randomIndex);
+            string question = dataLoader.Get(selectedFolder);
             SetText(richTextBoxQuestion, question);
             
             
