@@ -1,5 +1,8 @@
 .vs/
 RandomSelectorForQuestions/.vs/
 RandomSelectorForQuestions/obj/
-RandomSelectorForQuestions/bin/
+RandomSelectorForQuestions/bin/Release
+RandomSelectorForQuestions/bin/Debug/RandomSelectorForQuestions.exe
+RandomSelectorForQuestions/bin/Debug/RandomSelectorForQuestions.exe.config
+RandomSelectorForQuestions/bin/Debug/RandomSelectorForQuestions.pdb
 RandomSelectorForQuestions/data/seeds.txt
