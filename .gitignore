@@ -1,2 +1,5 @@
-
-/RandomSelectorForQuestions/.vs
+.vs/
+RandomSelectorForQuestions/.vs/
+RandomSelectorForQuestions/obj/
+RandomSelectorForQuestions/bin/
+RandomSelectorForQuestions/data/seeds.txt
