@@ -5,6 +5,11 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
+//using MathNet.Numerics;
+using System.Drawing.Imaging;
+using Aspose.TeX.Features;
+using System.Text.RegularExpressions;
+
 namespace RandomSelectorForQuestions
 {
     public partial class Window : Form
@@ -161,36 +166,87 @@ namespace RandomSelectorForQuestions
             float currentSize = richTextBoxQuestion.Font.Size;
             richTextBoxQuestion.Font = new Font(richTextBoxQuestion.Font.FontFamily, currentSize - 2);
         }
-        
+
+        int _counter = 0;
         public void SetText(RichTextBox rtb, string question)
         {
-            string picPath = "";
-            if (question.Contains("[IMAGE"))
+            if (question.Contains("$"))
             {
-                question = question.Replace("[IMAGE:", "");
-                foreach (var ch in question)
-                {
-                    if (ch == ']') break;
-                    else picPath += ch;
-                }
-                question = question.Replace(picPath + "]", "");
-                string selectedFolder = comboBoxFolders.SelectedItem.ToString().Replace("题库：", "");
-                picPath = Path.GetFullPath(Path.Combine(dataPath, selectedFolder, picPath));
-                Console.WriteLine(picPath);
-            }
-            rtb.Text = "题目：" + question + Environment.NewLine;
-            rtb.ForeColor = Color.Blue;
-            rtb.SelectionColor = Color.White;
-            rtb.Font = new Font("楷体", 16);
-            if(picPath != "")
-            {
-                Image myImage = Image.FromFile(picPath);
 
-                IDataObject data = new DataObject();
-                data.SetData(myImage);
-                Clipboard.SetDataObject(data, false);
-                rtb.SelectionStart = rtb.Text.Length;
+
+                rtb.Text = "" + Environment.NewLine;
+
+
+                MathRendererOptions options = new PngMathRendererOptions() { Resolution = 150 };
+
+                // 指定序言。
+                options.Preamble = @"\usepackage{amsmath}
+                  \usepackage{amsfonts}
+                  \usepackage{amssymb}
+                  \usepackage{color}
+                  ";
+
+                // 指定比例因子 300%。
+                options.Scale = 3000;
+                options.TextColor = System.Drawing.Color.Black;
+                options.BackgroundColor = System.Drawing.Color.White;
+                options.LogStream = new MemoryStream();
+                options.ShowTerminal = true;
+                System.Drawing.SizeF size = new System.Drawing.SizeF();
+                Stream stream;
+
+                _counter += 1;
+
+                string selectedFolder = comboBoxFolders.SelectedItem.ToString().Replace("题库：", "");
+                String save_path = Path.Combine(dataPath, selectedFolder, @"math-formula" + _counter.ToString() + ".png");
+                using (stream = File.Open(save_path, FileMode.Create))
+                {
+                    MathRenderer.Render(question, stream, options, out size);
+                }
+                stream.Close();
+
+                Console.WriteLine(_counter.ToString());
+
+                Image formulaImage = Image.FromFile(save_path);
+                IDataObject _data = new DataObject();
+                _data.SetData(formulaImage);
+                Clipboard.SetDataObject(_data, false);
+
+                //rtb.SelectionStart = rtb.Text.Length;
+
                 rtb.Paste();
+                Clipboard.Clear();
+
+            } else
+            {
+                string picPath = "";
+                if (question.Contains("[IMAGE"))
+                {
+                    question = question.Replace("[IMAGE:", "");
+                    foreach (var ch in question)
+                    {
+                        if (ch == ']') break;
+                        else picPath += ch;
+                    }
+                    question = question.Replace(picPath + "]", "");
+                    string selectedFolder = comboBoxFolders.SelectedItem.ToString().Replace("题库：", "");
+                    picPath = Path.GetFullPath(Path.Combine(dataPath, selectedFolder, picPath));
+                    Console.WriteLine(picPath);
+                }
+                rtb.Text = "题目：" + question + Environment.NewLine;
+                rtb.ForeColor = Color.Blue;
+                rtb.SelectionColor = Color.White;
+                rtb.Font = new Font("楷体", 16);
+                if (picPath != "")
+                {
+                    Image myImage = Image.FromFile(picPath);
+
+                    IDataObject data = new DataObject();
+                    data.SetData(myImage);
+                    Clipboard.SetDataObject(data, false);
+                    rtb.SelectionStart = rtb.Text.Length;
+                    rtb.Paste();
+                }
             }
         }
 

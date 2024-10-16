@@ -1,0 +1,4 @@
+What is $f(x)=x^n+x^k+x$ divided by $x^2+1$?
+Calculate $f(x)=x^2+x+1=0$, output the answer!
+Calculate the time complexity of $f(x)=(x^n+x)(x^n+x)$
+Calculate the value of $f(x)=x^4+x^2+1$ when $x=233$ 

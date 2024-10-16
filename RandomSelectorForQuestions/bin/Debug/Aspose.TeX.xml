@@ -1,0 +1,1740 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Aspose.TeX</name>
+  </assembly>
+  <members>
+    <member name="T:Aspose.TeX.BuildVersionInfo">
+      <summary>
+            This class provides information about current product build.
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.BuildVersionInfo.AssemblyVersion">
+      <summary>
+            Assembly Version
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.BuildVersionInfo.Product">
+      <summary>
+            Product Name
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.BuildVersionInfo.FileVersion">
+      <summary>
+            File Version
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.NamespaceDoc">
+      <summary>
+            The <b>Aspose.TeX</b> is a root namespace for all classes of Aspose.TeX library which are either directly in it like <b>Device</b> or indirectly through several namesubspaces.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Features.NamespaceDoc">
+      <summary>
+            The <b>Aspose.TeX.Features</b> namespace provides additional TeX(LaTeX) features.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Features.MathRenderer">
+      <summary>
+            Implements rendering of math formula.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Features.MathRenderer.Render(System.String,System.IO.Stream,Aspose.TeX.Features.MathRendererOptions,System.Drawing.SizeF@)">
+      <summary>
+            Renders a math formula.
+            </summary>
+      <param name="formula">The formula LaTeX program.</param>
+      <param name="stream">The stream to write the output to.</param>
+      <param name="mathRendererOptions">The rendering options.</param>
+      <param name="size">The output image size.</param>
+    </member>
+    <member name="T:Aspose.TeX.Features.MathRendererOptions">
+      <summary>
+            Math formula common rendering options.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Features.MathRendererOptions.#ctor">
+      <summary>
+            Creates a new instance.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Features.MathRendererOptions.Preamble">
+      <summary>
+            Gets/sets LaTeX document preamble.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Features.MathRendererOptions.Scale">
+      <summary>
+            Gets/set the scale. 1000 means 100%, 1200 means 120%, etc.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Features.MathRendererOptions.TextColor">
+      <summary>
+            Gets/sets the formula text color.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Features.MathRendererOptions.BackgroundColor">
+      <summary>
+            Gets/sets the background color.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Features.MathRendererOptions.LogStream">
+      <summary>
+            Gets/set the stream to write log output to.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Features.MathRendererOptions.ShowTerminal">
+      <summary>
+            The flag that controls terminal output. If <code>true</code> then terminal output is written to console.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Features.MathRendererOptions.ErrorReport">
+      <summary>
+            Gets the error report.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Features.PngMathRendererOptions">
+      <summary>
+            Math formula PNG rendering options.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Features.PngMathRendererOptions.Resolution">
+      <summary>
+            Gets/sets image resolution.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.IO.IFileTerminal">
+      <summary>
+            Interface of terminals which actually are files.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.IO.IFileTerminal.FileName">
+      <summary>
+            Gets/sets the file name.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.IO.IFileTerminal.WriteFile">
+      <summary>
+            Finalizes the log, e.g., writes it to file.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.IO.InputConsoleTerminal">
+      <summary>
+            Provides the console as a terminal input source. Wrapper for <see cref="P:System.Console.In" />.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.IO.InputConsoleTerminal.Reader">
+      <summary>
+            Gets the console as a terminal input source.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.IO.IInputTerminal">
+      <summary>
+            Interface for abstract input terminal.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.IO.IInputTerminal.Reader">
+      <summary>
+            Gets the reader for the input terminal.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.IO.InputFileSystemDirectory">
+      <summary>
+            Implements the regular file system's method for getting a file stream to read from.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.IO.InputFileSystemDirectory.#ctor(System.String)">
+      <summary>
+            Creates new instance.
+            </summary>
+      <param name="basePath">The base path of the directory.</param>
+    </member>
+    <member name="M:Aspose.TeX.IO.InputFileSystemDirectory.GetFile(System.String,System.String@,System.Boolean)">
+      <summary>
+            Returns the stream to read from.
+            </summary>
+      <param name="fileName">The file name.</param>
+      <param name="fullName">The full file name.</param>
+      <param name="searchSubdirectories">Indicates whether to look for a file in subdirectories.</param>
+      <returns>The stream.</returns>
+    </member>
+    <member name="M:Aspose.TeX.IO.InputFileSystemDirectory.Dispose">
+      <summary>
+            Disposes the instance.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.IO.IOutputTerminal">
+      <summary>
+            Interface for abstract output terminal.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.IO.IOutputTerminal.Writer">
+      <summary>
+            Gets the writer for the output terminal.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.IO.NamespaceDoc">
+      <summary>
+            The <b>Aspose.TeX.IO</b> namespace provides classes for I/O that TeX engine performs.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.IO.IInputWorkingDirectory">
+      <summary>
+            Interface of generalized input working directory.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.IO.IInputWorkingDirectory.GetFile(System.String,System.String@,System.Boolean)">
+      <summary>
+            Returns the stream to read from or to write to.
+            </summary>
+      <param name="fileName">The file name.</param>
+      <param name="fullName">The full file name.</param>
+      <param name="searchSubdirectories">Indicates whether to look for a file in subdirectories.</param>
+      <returns>The stream.</returns>
+    </member>
+    <member name="T:Aspose.TeX.IO.IOutputWorkingDirectory">
+      <summary>
+            Interface of generalized output working directory.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.IO.IOutputWorkingDirectory.GetOutputFile(System.String,System.String@)">
+      <summary>
+            Returns the stream to write to.
+            </summary>
+      <param name="fileName">The file name.</param>
+      <param name="fullName">The full file name.</param>
+      <returns>The stream.</returns>
+    </member>
+    <member name="T:Aspose.TeX.IO.OutputConsoleTerminal">
+      <summary>
+            Provides the console as a terminal output destination. Wrapper for <see cref="P:System.Console.Out" />.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.IO.OutputConsoleTerminal.Writer">
+      <summary>
+            Gets the console as a terminal output destination.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.IO.OutputFileSystemDirectory">
+      <summary>
+            Implements the regular file system's method for getting a file stream to write to.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.IO.OutputFileSystemDirectory.#ctor(System.String)">
+      <summary>
+            Creates new instance.
+            </summary>
+      <param name="basePath">The base path of the directory.</param>
+    </member>
+    <member name="M:Aspose.TeX.IO.OutputFileSystemDirectory.GetOutputFile(System.String,System.String@)">
+      <summary>
+            Returns the stream to write to.
+            </summary>
+      <param name="fileName">The file name.</param>
+      <param name="fullName">The full file name.</param>
+      <returns>The stream.</returns>
+    </member>
+    <member name="M:Aspose.TeX.IO.OutputFileSystemDirectory.Dispose">
+      <summary>
+            Disposes the instance.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.IO.OutputFileTerminal">
+      <summary>
+            Implements a terminal whose output is to be written to a file in some working directory.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.IO.OutputFileTerminal.#ctor(Aspose.TeX.IO.IOutputWorkingDirectory)">
+      <summary>
+            Creates new instance.
+            </summary>
+      <param name="workingDirectory">The working directory.</param>
+    </member>
+    <member name="P:Aspose.TeX.IO.OutputFileTerminal.FileName">
+      <summary>
+            Gets/sets the file name.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.IO.OutputFileTerminal.Writer">
+      <summary>
+            Gets the writer for the output terminal.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.IO.OutputFileTerminal.WriteFile">
+      <summary>
+            Finalizes the log, e.g., writes it to file.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.IO.OutputMemoryTerminal">
+      <summary>
+            Provides a memory stream as a terminal output destination.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.IO.OutputMemoryTerminal.Writer">
+      <summary>
+            Gets the writer for the output terminal.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.IO.OutputMemoryTerminal.Stream">
+      <summary>
+            Gets the memory stream.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.IO.InputZipDirectory">
+      <summary>
+            Implements the method for getting a file stream to write to when working directory is a ZIP archive.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.IO.InputZipDirectory.#ctor(System.IO.Stream,System.String)">
+      <summary>
+            Creates new instance.
+            </summary>
+      <param name="zipStream">The stream to write the archive to.</param>
+      <param name="basePath">The base path inside the ZIP archive.</param>
+    </member>
+    <member name="M:Aspose.TeX.IO.InputZipDirectory.GetFile(System.String,System.String@,System.Boolean)">
+      <summary>
+            Returns the stream to read from.
+            </summary>
+      <param name="fileName">The file name.</param>
+      <param name="fullName">The full file name.</param>
+      <param name="searchSubdirectories">Indicates whether to look for a file in subdirectories.</param>
+      <returns>The stream.</returns>
+    </member>
+    <member name="M:Aspose.TeX.IO.InputZipDirectory.Dispose">
+      <summary>
+            Disposes the instance.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.IO.OutputZipDirectory">
+      <summary>
+            Implements the method for getting a file stream to write to when working directory is a ZIP archive.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.IO.OutputZipDirectory.#ctor(System.IO.Stream)">
+      <summary>
+            Creates new instance.
+            </summary>
+      <param name="zipStream">The stream to write the archive to.</param>
+    </member>
+    <member name="M:Aspose.TeX.IO.OutputZipDirectory.GetFile(System.String,System.String@,System.Boolean)">
+      <summary>
+            Returns the stream to read from.
+            </summary>
+      <param name="fileName">The file name.</param>
+      <param name="fullName">The full file name.</param>
+      <param name="searchSubdirectories">Indicates whether to look for a file in subdirectories.</param>
+      <returns>The stream.</returns>
+    </member>
+    <member name="M:Aspose.TeX.IO.OutputZipDirectory.GetOutputFile(System.String,System.String@)">
+      <summary>
+            Returns the stream to write to.
+            </summary>
+      <param name="fileName">The file name.</param>
+      <param name="fullName">The full file name.</param>
+      <returns>The stream.</returns>
+    </member>
+    <member name="M:Aspose.TeX.IO.OutputZipDirectory.Finish">
+      <summary>
+            Finalizes ZIP archive.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.IO.OutputZipDirectory.Dispose">
+      <summary>
+            Disposes the instance.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.License">
+      <summary>
+            Provides methods to license the component.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.License.Embedded">
+      <summary>
+            License number was added as embedded resource.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.License.SetLicense(System.String)">
+      <summary>
+            Licenses the component.
+            </summary>
+      <remarks>
+        <p>Tries to find the license in the following locations:</p>
+        <p>1. Explicit path.</p>
+        <p>2. The folder that contains the Aspose component assembly.</p>
+        <p>3. The folder that contains the client's calling assembly.</p>
+        <p>4. The folder that contains the entry (startup) assembly.</p>
+        <p>5. An embedded resource in the client's calling assembly.</p>
+        <p>
+          <b>Note:</b>On the .NET Compact Framework, tries to find the license only in these locations:</p>
+        <p>1. Explicit path.</p>
+        <p>2. An embedded resource in the client's calling assembly.</p>
+      </remarks>
+      <param name="licenseName">Can be a full or short file name or name of an embedded resource.
+            Use an empty string to switch to evaluation mode.</param>
+    </member>
+    <member name="M:Aspose.TeX.License.SetLicense(System.IO.Stream)">
+      <summary>
+            Licenses the component.
+            </summary>
+      <param name="stream">A stream that contains the license.</param>
+      <remarks>
+        <p>Use this method to load a license from a stream.</p>
+      </remarks>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.NamespaceDoc">
+      <summary>
+            The <b>Aspose.TeX.Presentation</b> namespace provides common classes for typesetting TeX files to other formats.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Device">
+      <summary>
+            Implements the interface for outputting text and graphic content
+            to abstract device. Rendering is performed page by page.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.#ctor">
+      <summary>
+            Creates a new instance.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.Init">
+      <summary>
+            Initializes device.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.#ctor(Aspose.TeX.Presentation.Device)">
+      <summary>
+            Clone constructor. Initializes this device with another device.
+            </summary>
+      <param name="device">The device to clone.</param>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Device.PageCount">
+      <summary>
+            Gets the number of pages.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Device.IsReady">
+      <summary>
+            Shows if device is ready for output.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Device.DestinationName">
+      <summary>
+            Gets destination name: output file name or device description.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.Create">
+      <summary>
+            Creates a copy of this device.
+            </summary>
+      <returns>Copy of this device.</returns>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.Dispose">
+      <summary>
+            Disposes the device.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.StartDocument">
+      <summary>
+            Starts the whole document.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.EndDocument">
+      <summary>
+            Finalizes the whole document.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.StartPage(System.Single,System.Single)">
+      <summary>
+            Starts a new page.
+            </summary>
+      <param name="width">The page width.</param>
+      <param name="height">The page height.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.EndPage">
+      <summary>
+            Finalizes a page.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.AddHyperlink(System.Drawing.RectangleF,System.Drawing.Pen,System.String)">
+      <summary>
+            Sets the hyperlink with a URI as its target.
+            </summary>
+      <param name="activeRect">The active rectangle of the link.</param>
+      <param name="border">The link border.</param>
+      <param name="targetUri">The target URI.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.SetTransform(System.Drawing.Drawing2D.Matrix)">
+      <summary>
+            Sets the current coordinate space transformation.
+            </summary>
+      <param name="matrix">A transformation matrix.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.SetClip(System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>
+            Sets the current clip path.
+            </summary>
+      <param name="path">A clip path.</param>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Device.Stroke">
+      <summary>
+            Gets/sets the current stroke.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Device.Fill">
+      <summary>
+            Gets/sets the current fill.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.SaveGraphicsState">
+      <summary>
+            Saves the current graphics state.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.RestoreGraphicsState">
+      <summary>
+            Rolls back to the graphics state previously saved.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.DrawString(System.String,System.Single,System.Single,System.Collections.Generic.List{Aspose.TeX.Presentation.GlyphData})">
+      <summary>
+            Draws a text string.
+            </summary>
+      <param name="str">The string.</param>
+      <param name="originX">The x coordinate of the origin.</param>
+      <param name="originY">The x coordinate of the origin.</param>
+      <param name="charInfos">Glyph data required for precise typesetting of a text string.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.DrawPath(System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>
+            Draws a path.
+            </summary>
+      <param name="path">A path to draw.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.FillPath(System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>
+            Fills a path.
+            </summary>
+      <param name="path">A path to fill.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Device.ShowImage(System.Drawing.PointF,System.Drawing.SizeF,System.Byte[])">
+      <summary>
+            Shows a raster image.
+            </summary>
+      <param name="origin">The bottom-left corner of the shown image.</param>
+      <param name="size">The size of the shown image.</param>
+      <param name="imageData">The image data.</param>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.IFragmentRasterizer">
+      <summary>
+            Interface that allows to rasterize TeX fragments.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.IFragmentRasterizer.StartFragment">
+      <summary>
+            Starts a fragment to rasterize.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.IFragmentRasterizer.EndFragment">
+      <summary>
+            Ends a fragment to rasterize.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.IInteractiveDevice">
+      <summary>
+            The interface defining interactive features processing methods.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.IInteractiveDevice.AddBookmark(System.String,System.Drawing.PointF)">
+      <summary>
+            Adds the bookmark identified by the name.
+            </summary>
+      <param name="name">The name.</param>
+      <param name="position">The position.</param>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.GlyphData">
+      <summary>
+            Container class for glyph data required for precise typesetting of a text string.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.GlyphData.NaturalWidth">
+      <summary>
+            Gets/sets glyph width defined by font.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.GlyphData.AdvanceWidth">
+      <summary>
+            Gets/sets glyph width taking into account kerns.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.GlyphData.UOffset">
+      <summary>
+            Gets/sets horizontal offset.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.GlyphData.VOffset">
+      <summary>
+            Gets/sets vertical offset.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Image.BmpSaveOptions">
+      <summary>
+            Class representing options of saving to bitmap image.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Image.NamespaceDoc">
+      <summary>
+            The <b>Aspose.TeX.Presentation.Image</b> namespace provides classes for typesetting TeX files to images.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Image.ImageDevice">
+      <summary>
+            Implements the interface for outputting text and graphic content to image(s).
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageDevice.#ctor(System.Boolean)">
+      <summary>
+            Creates new instance.
+            The output file will be written to the output working
+            directory taking the job name as a file name.
+            </summary>
+      <param name="whiteBackground">If true then fills white background on every page.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageDevice.Init">
+      <summary>
+            Initializes device.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageDevice.#ctor(Aspose.TeX.Presentation.Image.ImageDevice)">
+      <summary>
+            Clone constructor. Initializes this device with another device.
+            </summary>
+      <param name="device">The device to clone.</param>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Image.ImageDevice.PageCount">
+      <summary>
+            Gets the number of pages.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Image.ImageDevice.IsReady">
+      <summary>
+            Shows if device is ready for output.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Image.ImageDevice.DestinationName">
+      <summary>
+            Gets destination name: output file name or device description.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Image.ImageDevice.Result">
+      <summary>
+            Returns the resulting images byte arrays.
+            The first dimension is for inner documents
+            and the second one is for pages within inner documents.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageDevice.Create">
+      <summary>
+            Creates a copy of this device.
+            </summary>
+      <returns>Copy of this device.</returns>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageDevice.Dispose">
+      <summary>
+            Disposes this device instance. Finalizes this device instance graphics state,
+            i.e. switches composing context to the level higher then this device's graphics state.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageDevice.StartDocument">
+      <summary>
+            Starts the whole document.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageDevice.EndDocument">
+      <summary>
+            Finalizes the whole document.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageDevice.StartPage(System.Single,System.Single)">
+      <summary>
+            Starts a new page.
+            </summary>
+      <param name="width">The page width.</param>
+      <param name="height">The page height.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageDevice.EndPage">
+      <summary>
+            Finalizes a page.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageDevice.AddHyperlink(System.Drawing.RectangleF,System.Drawing.Pen,System.String)">
+      <summary>
+            Set the hyperlink with a URI as its target.
+            </summary>
+      <param name="activeRect">The active rectangle of the link.</param>
+      <param name="border">The link border.</param>
+      <param name="targetUri">The target URI.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageDevice.SetTransform(System.Drawing.Drawing2D.Matrix)">
+      <summary>
+            Sets the current coordinate space transformation.
+            </summary>
+      <param name="matrix">A transformation matrix.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageDevice.SetClip(System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>
+            Sets the current clip path.
+            </summary>
+      <param name="path">A clip path.</param>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Image.ImageDevice.Stroke">
+      <summary>
+            Gets/sets the current stroke.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Image.ImageDevice.Fill">
+      <summary>
+            Gets/sets the current fill.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageDevice.DrawString(System.String,System.Single,System.Single,System.Collections.Generic.List{Aspose.TeX.Presentation.GlyphData})">
+      <summary>
+            Draws a text string.
+            </summary>
+      <param name="str">The string.</param>
+      <param name="originX">The x coordinate of the origin.</param>
+      <param name="originY">The x coordinate of the origin.</param>
+      <param name="charInfos">Glyph data required for precise typesetting of a text string.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageDevice.DrawPath(System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>
+            Draws a path.
+            </summary>
+      <param name="path">A path to draw.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageDevice.FillPath(System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>
+            Fill a path.
+            </summary>
+      <param name="path">A path to fill.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageDevice.ShowImage(System.Drawing.PointF,System.Drawing.SizeF,System.Byte[])">
+      <summary>
+            Shows a raster image.
+            </summary>
+      <param name="origin">The bottom-left corner of the shown image.</param>
+      <param name="size">The size of the shown image.</param>
+      <param name="imageData">The image data.</param>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Image.ImageSaveOptions">
+      <summary>
+            Basic class representing options of saving to PDF.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Image.ImageSaveOptions.#ctor">
+      <summary>
+            Creates new instance of options.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Image.ImageSaveOptions.PageNumbers">
+      <summary>
+            Gets/sets the array of numbers of pages to convert.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Image.ImageSaveOptions.Resolution">
+      <summary>
+            Gets/sets the image resolution.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Image.ImageSaveOptions.SmoothingMode">
+      <summary>
+            Gets/sets the smoothing mode.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Image.ImageSaveOptions.InterpolationMode">
+      <summary>
+            Gets/sets the interpolation mode.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Image.JpegSaveOptions">
+      <summary>
+            Class representing options of saving to JPEG image.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Image.PngSaveOptions">
+      <summary>
+            Class representing options of saving to PNG image.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Image.TiffSaveOptions">
+      <summary>
+            Class representing options of saving to TIFF image.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Pdf.NamespaceDoc">
+      <summary>
+            The <b>Aspose.TeX.Presentation.Pdf</b> namespace provides classes for typesetting TeX files to PDF.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Pdf.PdfDevice">
+      <summary>
+            Implements the interface for outputting text and graphic content to PDF document.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.#ctor">
+      <summary>
+            Creates new instance.
+            The output file will be written to the output working
+            directory taking the job name as a file name.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.#ctor(System.IO.Stream)">
+      <summary>
+            Creates new instance.
+            The output file will be written to specified stream.
+            </summary>
+      <param name="stream">The stream to write the output file to.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.Init">
+      <summary>
+            Initializes device.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.#ctor(Aspose.TeX.Presentation.Pdf.PdfDevice)">
+      <summary>
+            Clone constructor. Initializes this device with another device.
+            </summary>
+      <param name="device">The device to clone.</param>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Pdf.PdfDevice.PageCount">
+      <summary>
+            Gets the number of pages.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Pdf.PdfDevice.IsReady">
+      <summary>
+            Shows if device is ready for output.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Pdf.PdfDevice.DestinationName">
+      <summary>
+            Gets destination name: output file name or device description.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.Create">
+      <summary>
+            Creates a copy of this device.
+            </summary>
+      <returns>Copy of this device.</returns>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.Dispose">
+      <summary>
+            Disposes this device instance. Finalizes this device instance graphics state,
+            i.e. switches APS composing context to the <see cref="T:Aspose.Rendering.ApsCanvas" /> of the level higher then this
+            device's graphics state <see cref="T:Aspose.Rendering.ApsCanvas" />.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.StartDocument">
+      <summary>
+            Starts the whole document.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.EndDocument">
+      <summary>
+            Finalizes the whole document.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.StartPage(System.Single,System.Single)">
+      <summary>
+            Starts a new page.
+            </summary>
+      <param name="width">The page width.</param>
+      <param name="height">The page height.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.EndPage">
+      <summary>
+            Finalizes a page.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.AddHyperlink(System.Drawing.RectangleF,System.Drawing.Pen,System.String)">
+      <summary>
+            Set the hyperlink with a URI as its target.
+            </summary>
+      <param name="activeRect">The active rectangle of the link.</param>
+      <param name="border">The link border.</param>
+      <param name="targetUri">The target URI.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.AddBookmark(System.String,System.Drawing.PointF)">
+      <summary>
+            Adds the bookmark identified by the name.
+            </summary>
+      <param name="name">The name.</param>
+      <param name="position">The position.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.SetTransform(System.Drawing.Drawing2D.Matrix)">
+      <summary>
+            Sets the current coordinate space transformation.
+            </summary>
+      <param name="matrix">A transformation matrix.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.SetClip(System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>
+            Sets the current clip path.
+            </summary>
+      <param name="path">A clip path.</param>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Pdf.PdfDevice.Stroke">
+      <summary>
+            Gets/sets the current stroke.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Pdf.PdfDevice.Fill">
+      <summary>
+            Gets/sets the current fill.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.DrawString(System.String,System.Single,System.Single,System.Collections.Generic.List{Aspose.TeX.Presentation.GlyphData})">
+      <summary>
+            Draws a text string.
+            </summary>
+      <param name="str">The string.</param>
+      <param name="originX">The x coordinate of the origin.</param>
+      <param name="originY">The x coordinate of the origin.</param>
+      <param name="charInfos">Glyph data required for precise typesetting of a text string.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.DrawPath(System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>
+            Draws a path.
+            </summary>
+      <param name="path">A path to draw.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.FillPath(System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>
+            Fill a path.
+            </summary>
+      <param name="path">A path to fill.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.ShowImage(System.Drawing.PointF,System.Drawing.SizeF,System.Byte[])">
+      <summary>
+            Shows a raster image.
+            </summary>
+      <param name="origin">Top-left corner of the shown image.</param>
+      <param name="size">The size of the shown image.</param>
+      <param name="imageData">The image data.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.StartFragment">
+      <summary>
+            Starts a fragment to rasterize.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfDevice.EndFragment">
+      <summary>
+            Ends a fragment to rasterize.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Pdf.PdfSaveOptions">
+      <summary>
+            Class representing options of saving to PDF.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Pdf.PdfSaveOptions.JpegQualityLevel">
+      <summary>
+            The Quality category specifies the level of compression for an image.
+            Available values are 0 to 100. 
+            The lower the number specified, the higher the compression and therefore the lower the quality of the image. 
+            0 value results in lowest quality image, while 100 results in highest.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Pdf.PdfSaveOptions.OutlineTreeHeight">
+      <summary>
+            Specifies the height of the document outline tree to save.
+            0 - the outline tree will not be converted,
+            1 - only the first level outline items will be converted,
+            ans so on.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Pdf.PdfSaveOptions.OutlineTreeExpansionLevel">
+      <summary>
+            Specifies up to what level the document outline should be expanded when the PDF file is viewed.
+            1 - only the first level outline items are shown,
+            2 - only the first and second level outline items are shown,
+            and so on.
+            Default is 1.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Pdf.PdfSaveOptions.TextCompression">
+      <summary>
+            Specifies compression type to be used for all content streams except images.
+            Default is <see cref="F:Aspose.TeX.Presentation.Pdf.PdfTextCompression.Flate" />.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Pdf.PdfSaveOptions.ImageCompression">
+      <summary>
+            Specifies compression type to be used for all images in the document.
+            Default is <see cref="F:Aspose.TeX.Presentation.Pdf.PdfImageCompression.Auto" />.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Pdf.PdfSaveOptions.EncryptionDetails">
+      <summary>
+            Gets or sets a encryption details. If not set, then no encryption will be performed.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Pdf.PdfTextCompression">
+      <summary>
+            Specifies a type of compression applied to all contents in the PDF file except images.
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Presentation.Pdf.PdfTextCompression.None">
+      <summary>
+            None compression type
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Presentation.Pdf.PdfTextCompression.Rle">
+      <summary>
+            Rle compression type
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Presentation.Pdf.PdfTextCompression.Lzw">
+      <summary>
+            Lzw compression type
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Presentation.Pdf.PdfTextCompression.Flate">
+      <summary>
+            Flate compression type
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Pdf.PdfImageCompression">
+      <summary>
+            Specifies the type of compression applied to images in the PDF file.
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Presentation.Pdf.PdfImageCompression.Auto">
+      <summary>
+            Automatically selects the most appropriate compression for each image.
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Presentation.Pdf.PdfImageCompression.None">
+      <summary>
+            Saves raw image bytes resulting in bigger PDF file sizes.
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Presentation.Pdf.PdfImageCompression.Rle">
+      <summary>
+            Run Length compression.
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Presentation.Pdf.PdfImageCompression.Flate">
+      <summary>
+            Flate compression.
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Presentation.Pdf.PdfImageCompression.LzwBaselinePredictor">
+      <summary>
+            Predictor selection is restricted to PNG Paeth predictor to speed-up the process. In practice
+            performs surprisingly good. Better than <see cref="F:Aspose.TeX.Presentation.Pdf.PdfImageCompression.LzwOptimizedPredictor" />.
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Presentation.Pdf.PdfImageCompression.LzwOptimizedPredictor">
+      <summary>
+            Predictor selection is more complicated and should result in smaller image sizes but
+            taking more time.
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Presentation.Pdf.PdfImageCompression.Jpeg">
+      <summary>
+            JPEG compression.
+            Does not support transparency.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Pdf.PdfEncryptionDetails">
+      <summary>
+            Contains details for a pdf encryption.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Pdf.PdfEncryptionDetails.#ctor(System.String,System.String,System.Int32,Aspose.TeX.Presentation.Pdf.PdfEncryptionAlgorithm)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Aspose.Rendering.Pdf.PdfEncryptionDetailsCore" /> class.
+            </summary>
+      <param name="userPassword">The user password.</param>
+      <param name="ownerPassword">The owner password.</param>
+      <param name="permissions">The permissions.</param>
+      <param name="encryptionAlgorithm">The encryption algorithm.</param>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Pdf.PdfEncryptionDetails.UserPassword">
+      <summary>
+            Gets or sets the User password.
+            </summary>
+      <value>
+            The user password.
+            </value>
+      <remarks>
+            Opening the document with the correct user password (or opening a document
+            that does not have a user password) allows additional operations to be
+            performed according to the user access permissions specified in the document’s
+            encryption dictionary.
+            </remarks>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Pdf.PdfEncryptionDetails.OwnerPassword">
+      <summary>
+            Gets or sets the Owner password.
+            </summary>
+      <value>
+            The owner password.
+            </value>
+      <remarks>
+            Opening the document with the correct owner password (assuming it is not the
+            same as the user password) allows full (owner) access to the document. This
+            unlimited access includes the ability to change the document’s passwords and
+            access permissions.
+            </remarks>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Pdf.PdfEncryptionDetails.Permissions">
+      <summary>
+            Gets or sets the permissions.
+            </summary>
+      <value>
+            The permissions.
+            </value>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Pdf.PdfEncryptionDetails.EncryptionAlgorithm">
+      <summary>
+            Gets or sets the encryption mode.
+            </summary>
+      <value>
+            The encryption algorithm.
+            </value>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Pdf.PdfEncryptionAlgorithm">
+      <summary>
+            Encryption mode enum. Describe using algorithm and key length.
+            This enum is extended in order to be able to further increase functionality.
+            This enum implements "Base-to-Core" pattern.
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Presentation.Pdf.PdfEncryptionAlgorithm.RC4_40">
+      <summary>
+            Algorithm, with an RC4 encryption key length of 40 bits;
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Presentation.Pdf.PdfEncryptionAlgorithm.RC4_128">
+      <summary>
+            Algorithm, with an RC4 encryption key length of 128 bits and advanced permission set;
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.SaveOptions">
+      <summary>
+            Basic class for document saving options.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.SaveOptions.SubsetFonts">
+      <summary>
+            Gets/sets the flag indicating whether to subset fonts in output file or not.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.SaveOptions.RasterizeFormulas">
+      <summary>
+            Gets/sets the flag that allows to rasterize math formulas.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Xps.NamespaceDoc">
+      <summary>
+            The <b>Aspose.TeX.Presentation.Xps</b> namespace provides classes for typesetting TeX files to XPS.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Xps.XpsDevice">
+      <summary>
+            Implements the interface for outputting text and graphic content to XPS document.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.#ctor">
+      <summary>
+            Creates new instance.
+            The output file will be written to the output working
+            directory taking the job name as a file name.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.#ctor(System.IO.Stream)">
+      <summary>
+            Creates new instance.
+            The output file will be written to specified stream.
+            </summary>
+      <param name="stream">The stream to write the output file to.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.Init">
+      <summary>
+            Initializes device.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.#ctor(Aspose.TeX.Presentation.Xps.XpsDevice)">
+      <summary>
+            Clone constructor. Initializes this device with another device.
+            </summary>
+      <param name="device">The device to clone.</param>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Xps.XpsDevice.PageCount">
+      <summary>
+            Gets the number of pages.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Xps.XpsDevice.IsReady">
+      <summary>
+            Shows if device is ready for output.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Xps.XpsDevice.DestinationName">
+      <summary>
+            Gets destination name: output file name or device description.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.Create">
+      <summary>
+            Creates a copy of this device.
+            </summary>
+      <returns>Copy of this device.</returns>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.Dispose">
+      <summary>
+            Disposes this device instance. Finalizes this device instance graphics state,
+            i.e. switches APS composing context to the <see cref="T:Aspose.Rendering.ApsCanvas" /> of the level higher then this
+            device's graphics state <see cref="T:Aspose.Rendering.ApsCanvas" />.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.StartDocument">
+      <summary>
+            Starts the whole document.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.EndDocument">
+      <summary>
+            Finalizes the whole document.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.StartPage(System.Single,System.Single)">
+      <summary>
+            Starts a new page.
+            </summary>
+      <param name="width">The page width.</param>
+      <param name="height">The page height.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.EndPage">
+      <summary>
+            Finalizes a page.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.AddHyperlink(System.Drawing.RectangleF,System.Drawing.Pen,System.String)">
+      <summary>
+            Set the hyperlink with a URI as its target.
+            </summary>
+      <param name="activeRect">The active rectangle of the link.</param>
+      <param name="border">The link border.</param>
+      <param name="targetUri">The target URI.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.AddBookmark(System.String,System.Drawing.PointF)">
+      <summary>
+            Adds the bookmark identified by the name.
+            </summary>
+      <param name="name">The name.</param>
+      <param name="position">The position.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.SetTransform(System.Drawing.Drawing2D.Matrix)">
+      <summary>
+            Sets the current coordinate space transformation.
+            </summary>
+      <param name="matrix">A transformation matrix.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.SetClip(System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>
+            Sets the current clip path.
+            </summary>
+      <param name="path">A clip path.</param>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Xps.XpsDevice.Stroke">
+      <summary>
+            Gets/sets the current stroke.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.Presentation.Xps.XpsDevice.Fill">
+      <summary>
+            Gets/sets the current fill.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.DrawString(System.String,System.Single,System.Single,System.Collections.Generic.List{Aspose.TeX.Presentation.GlyphData})">
+      <summary>
+            Draws a text string.
+            </summary>
+      <param name="str">The string.</param>
+      <param name="originX">The x coordinate of the origin.</param>
+      <param name="originY">The x coordinate of the origin.</param>
+      <param name="charInfos">Glyph data required for precise typesetting of a text string.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.DrawPath(System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>
+            Draws a path.
+            </summary>
+      <param name="path">A path to draw.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.FillPath(System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>
+            Fill a path.
+            </summary>
+      <param name="path">A path to fill.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.ShowImage(System.Drawing.PointF,System.Drawing.SizeF,System.Byte[])">
+      <summary>
+            Shows a raster image.
+            </summary>
+      <param name="origin">The bottom-left corner of the shown image.</param>
+      <param name="size">The size of the shown image.</param>
+      <param name="imageData">The image data.</param>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.StartFragment">
+      <summary>
+            Starts a fragment to rasterize.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.Presentation.Xps.XpsDevice.EndFragment">
+      <summary>
+            Ends a fragment to rasterize.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Presentation.Xps.XpsSaveOptions">
+      <summary>
+            Class representing options of saving to XPS.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.Interaction">
+      <summary>
+            Represents increasing amounts of user interaction.
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Interaction.BatchMode">
+      <summary>
+            Omits all stops and omits terminal output.
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Interaction.NonstopMode">
+      <summary>
+            Omits all stops.
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Interaction.ScrollMode">
+      <summary>
+            Omits error stops.
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Interaction.ErrorStopMode">
+      <summary>
+            Stops at every opportunity to interact.
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.Interaction.FormatDefined">
+      <summary>
+            Preserves the interaction mode defined by a TeX format.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.ResourceProviders.NamespaceDoc">
+      <summary>
+            The <b>Aspose.TeX.ResourceProviders</b> namespace provides common classes for resource providers.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.ResourceProviders.FormatProvider">
+      <summary>
+            Class providing TeX format.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.ResourceProviders.FormatProvider.ObjectTeX">
+      <summary>
+            Default format provider for ObjectTeX engine extension.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.ResourceProviders.FormatProvider.ObjectLaTeX">
+      <summary>
+            LaTeX format provider for ObjectTeX engine extension.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.ResourceProviders.FormatProvider.#ctor(Aspose.TeX.IO.IInputWorkingDirectory,System.String)">
+      <summary>
+            Creates a new instance.
+            </summary>
+      <param name="workingDirectory">The working directory.</param>
+      <param name="formatFileName">The source file name to start reading format from.</param>
+    </member>
+    <member name="M:Aspose.TeX.ResourceProviders.FormatProvider.Dispose">
+      <summary>
+            Disposes the instance.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.TeXConfig">
+      <summary>
+            Class providing available TeX configurations.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.TeXConfig.ObjectIniTeX">
+      <summary>
+            Gets the configuration of ObjectTeX engine extension with no format preloaded, i.e. in INITEX mode.
+            Supposed to be used for format preparation.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.TeXConfig.ObjectLaTeX">
+      <summary>
+            Gets the configuration of ObjectTeX engine extension with ObjectLaTeX format preloaded.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.TeXConfig.ObjectTeX(Aspose.TeX.ResourceProviders.FormatProvider)">
+      <summary>
+            Gets the configuration of ObjectTeX engine extension with provided format preloaded.
+            </summary>
+      <param name="formatProvider">The format provider.
+            If left equal to null then default ObjectTeX format (which is essentially Plain TeX) will be loaded.</param>
+      <returns>"ObjectTeX engine extension with provided format preloaded" configuration.</returns>
+    </member>
+    <member name="T:Aspose.TeX.TeXExtension">
+      <summary>
+            Class defining constants to choose a TeX engine extension from.
+            </summary>
+    </member>
+    <member name="F:Aspose.TeX.TeXExtension.ObjectTeX">
+      <summary>
+            ObjectTeX extensions.
+            </summary>
+    </member>
+    <member name="T:Aspose.TeX.TeXJob">
+      <summary>
+            Implements features of a TeX job.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.TeXJob.#ctor(System.IO.Stream,Aspose.TeX.Presentation.Device,Aspose.TeX.TeXOptions)">
+      <summary>
+            Creates a TeX job for running the engine in production mode to typeset a TeX file.
+            </summary>
+      <param name="stream">The stream containing the TeX file.</param>
+      <param name="device">The device defining output representation.</param>
+      <param name="options">TeX engine run options.</param>
+    </member>
+    <member name="M:Aspose.TeX.TeXJob.#ctor(System.String,Aspose.TeX.Presentation.Device,Aspose.TeX.TeXOptions)">
+      <summary>
+            Creates a TeX job for running the engine in production mode to typeset a TeX file.
+            </summary>
+      <param name="path">The path to the TeX file.</param>
+      <param name="device">The device defining output representation.</param>
+      <param name="options">TeX engine run options.</param>
+    </member>
+    <member name="M:Aspose.TeX.TeXJob.#ctor(Aspose.TeX.Presentation.Device,Aspose.TeX.TeXOptions)">
+      <summary>
+            Creates a TeX job for running the engine in production mode to typeset a TeX document.
+            The engine will prompt the file name as soon as it starts.
+            Thus this run is supposed to be interactive.
+            </summary>
+      <param name="device">The device defining output representation.</param>
+      <param name="options">TeX engine run options.</param>
+    </member>
+    <member name="M:Aspose.TeX.TeXJob.Run">
+      <summary>
+            Runs TeX job.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.TeXJob.CreateFormat(System.String,Aspose.TeX.TeXOptions)">
+      <summary>
+            Runs TeX engine in INITEX mode to create a format file (.fmt).
+            </summary>
+      <param name="path">The path to the main format source file.</param>
+      <param name="options">TeX engine run options.</param>
+    </member>
+    <member name="T:Aspose.TeX.TeXOptions">
+      <summary>
+            TeX file processing options class.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.TeXOptions.JobName">
+      <summary>
+            Gets/set the name of the job.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.TeXOptions.TerminalIn">
+      <summary>
+            Gets/sets the input terminal reader.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.TeXOptions.TerminalOut">
+      <summary>
+            Gets/sets the output terminal writer.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.TeXOptions.InputWorkingDirectory">
+      <summary>
+            Gets/sets input working directory.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.TeXOptions.OutputWorkingDirectory">
+      <summary>
+            Gets/sets output working directory.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.TeXOptions.RequiredInputDirectory">
+      <summary>
+            Gets/sets the directory for the required input, e.g.,
+            packages that are beyond Aspose.TeX's LaTeX support.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.TeXOptions.Interaction">
+      <summary>
+            Gets/sets the interaction mode to run a TeX engine in.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.TeXOptions.IgnoreMissingPackages">
+      <summary>
+            Gets/sets the flag that instructs the engine whether to halt
+            on missing package read attempt or ignore it.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.TeXOptions.SaveOptions">
+      <summary>
+            Gets/sets options used for rendering into destination format (XPS, PDF, image, etc.).
+            Default value is the set of default options for rendering to XPS.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.TeXOptions.DateTime">
+      <summary>
+            Gets/sets a certain value for date/time primitives like \year, \month, \day and \time.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.TeXOptions.Repeat">
+      <summary>
+            Gets/sets the flag that indicates whether it is necessary to run the TeX job twice in case,
+            for example, there are references in input TeX file(s). In general, this behavior is useful when
+            the engine collects some data along the typesetting process and stores it in an auxilliary file,
+            all at the first run. And at the second run, the engine somehow uses that data.
+            </summary>
+    </member>
+    <member name="P:Aspose.TeX.TeXOptions.NoLigatures">
+      <summary>
+            Gets/sets the flag that cancels ligatures in all fonts.
+            </summary>
+    </member>
+    <member name="M:Aspose.TeX.TeXOptions.ConsoleAppOptions(Aspose.TeX.TeXConfig)">
+      <summary>
+            Returns options for use in console application.
+            </summary>
+      <param name="config">A TeX config.</param>
+      <returns>TeX options.</returns>
+    </member>
+    <member name="T:Aspose.Foundation.Drawing.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Foundation.Drawing</b> namespace provides classes that serves as equivalents of System.Drawing classes.
+            </summary>
+    </member>
+    <member name="T:Aspose.Foundation.sfntly.typography.font.sfntly.table.core.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Foundation.sfntly.typography.font.sfntly.table.core</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Foundation.sfntly.typography.font.sfntly.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Foundation.sfntly.typography.font.sfntly</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Foundation.sfntly.typography.font.tools.conversion.eot.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Foundation.sfntly.typography.font.tools.conversion.eot</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Foundation.UriResolver.RequestResponses.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Foundation.UriResolver.RequestResponses</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Foundation.UriResolver.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Foundation.UriResolver</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Foundation.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Foundation</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Foundation.Layout.DOM.Control.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Foundation.Layout.DOM.Control</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Foundation.Layout.DOM.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Foundation.Layout.DOM</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Foundation.Layout.DOM.Split.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Foundation.Layout.DOM.Split</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Foundation.Layout.DOM.Style.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Foundation.Layout.DOM.Style</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Foundation.Layout.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Foundation.Layout</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Foundation.Rendering.Rtf.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Foundation.Rendering.Rtf</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.OpcPackaging.NamespaceDoc">
+      <summary>
+            The <b>Aspose.OpcPackaging</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Pipeline.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Pipeline</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Rendering.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Rendering</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Rendering.Dml.Builders.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Rendering.Dml.Builders</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Rendering.Dml.Colors.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Rendering.Dml.Colors</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Rendering.Dml.Colors.Modifiers.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Rendering.Dml.Colors.Modifiers</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Rendering.Dml.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Rendering.Dml</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Rendering.Dml.Fills.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Rendering.Dml.Fills</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Rendering.Dml.Outlines.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Rendering.Dml.Outlines</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Rendering.Dml.Styles.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Rendering.Dml.Styles</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Rendering.Gdi.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Rendering.Gdi</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Rendering.Metafiles.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Rendering.Metafiles</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Rendering.Pdf.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Rendering.Pdf</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Rendering.Swf.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Rendering.Swf</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Rendering.Wmf.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Rendering.Wmf</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Rendering.Xps.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Rendering.Xps</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Rendering.Svg.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Rendering.Svg</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Rendering.Xaml.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Rendering.Xaml</b> namespace.
+            </summary>
+    </member>
+    <!-- Badly formed XML comment ignored for member "M:Aspose.Serialization.Xml.ApsSaver.SaveSeparatePagesBatch(System.Int32,System.Int32,System.Collections.Generic.List{Aspose.Rendering.ApsPage})" -->
+    <member name="T:Aspose.Serialization.Xml.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Serialization.Xml</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.TrueType.CMapFormats.NamespaceDoc">
+      <summary>
+            The <b>Aspose.TrueType.CMapFormats</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.TrueType.EmbeddedOpenType.NamespaceDoc">
+      <summary>
+            The <b>Aspose.TrueType.EmbeddedOpenType</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.TrueType.NamespaceDoc">
+      <summary>
+            The <b>Aspose.TrueType</b> namespace provides classes for manipulating TrueType fonts.
+            </summary>
+    </member>
+    <member name="T:Aspose.NamespaceDoc">
+      <summary>
+            The <b>Aspose</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Crypto.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Crypto</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Fonts.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Fonts</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Images.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Images</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Pal.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Pal</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Ss.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Ss</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Ss.Property.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Ss.Property</b> namespace.
+            </summary>
+    </member>
+    <member name="T:Aspose.Zip.NamespaceDoc">
+      <summary>
+            The <b>Aspose.Zip</b> namespace.
+            </summary>
+    </member>
+  </members>
+</doc>
