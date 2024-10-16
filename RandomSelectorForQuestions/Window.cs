@@ -197,8 +197,7 @@ namespace RandomSelectorForQuestions
 
                 _counter += 1;
 
-                string selectedFolder = comboBoxFolders.SelectedItem.ToString().Replace("题库：", "");
-                String save_path = Path.Combine(dataPath, selectedFolder, @"math-formula" + _counter.ToString() + ".png");
+                String save_path = Path.Combine(dataPath, @"problems-with-formula", @"math-formula" + _counter.ToString() + ".png");
                 using (stream = File.Open(save_path, FileMode.Create))
                 {
                     MathRenderer.Render(question, stream, options, out size);
@@ -229,8 +228,7 @@ namespace RandomSelectorForQuestions
                         else picPath += ch;
                     }
                     question = question.Replace(picPath + "]", "");
-                    string selectedFolder = comboBoxFolders.SelectedItem.ToString().Replace("题库：", "");
-                    picPath = Path.GetFullPath(Path.Combine(dataPath, selectedFolder, picPath));
+                    picPath = Path.GetFullPath(Path.Combine(dataPath, @"problems-with-image", picPath));
                     Console.WriteLine(picPath);
                 }
                 rtb.Text = "题目：" + question + Environment.NewLine;
