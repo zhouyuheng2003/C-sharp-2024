@@ -28,35 +28,45 @@ namespace RandomSelectorForQuestions
         }
 
         // 读取data文件夹下所有子题库中的problems.txt文件
-        private void LoadData(string dataFolderPath){
-            myDataFolderPath = dataFolderPath; 
+        private void LoadData(string dataFolderPath)
+        {
+            myDataFolderPath = dataFolderPath;
             folders = Directory.GetDirectories(dataFolderPath).Select(Path.GetFileName).ToList();
-            foreach (var folder in folders){
+            foreach (var folder in folders)
+            {
                 string filePath = Path.Combine(dataFolderPath, folder, "problems.txt");
-                if (File.Exists(filePath)){
+                if (File.Exists(filePath))
+                {
                     // 读取每个文件的所有行，保存为字符串数组
                     problemData[folder] = File.ReadAllLines(filePath);
                     problemCount += problemData[folder].Length;
                 }
             }
             int suf = 0;
-            foreach(var folder in folders)
+            int folder_count = 0;
+            foreach (var folder in folders)
             {
                 suf += GetProblemCount(folder);
                 suf_count_problemset[folder] = suf;
+                folder_count++;
             }
+            int valid_seed = 0;
             if (File.Exists(Path.Combine(dataFolderPath, "seeds.txt")))
             {
                 string[] seed = File.ReadAllLines(Path.Combine(dataFolderPath, "seeds.txt"));
-                seeds = int.Parse(seed[0]);
-                int tot = 1;
-                foreach (var folder in folders)
+                if (seed.Length == folder_count + 1)
                 {
-                    used_for_problemset[folder] = int.Parse(seed[tot]);
-                    tot++;
+                    seeds = int.Parse(seed[0]);
+                    int tot = 1;
+                    foreach (var folder in folders)
+                    {
+                        used_for_problemset[folder] = int.Parse(seed[tot]);
+                        tot++;
+                    }
+                    valid_seed = 1;
                 }
             }
-            else
+            if (valid_seed == 0)
             {
                 seeds = new Random().Next(0, 10000);
                 foreach (var folder in folders)
@@ -133,6 +143,7 @@ namespace RandomSelectorForQuestions
             }
             WriteData();
         }
+        public string allfolder;
         public string Get(string folder){
             int index = -1;
             if (folder == "all")
@@ -165,7 +176,7 @@ namespace RandomSelectorForQuestions
             }
 
             WriteData();
-
+            allfolder = folder;
             return problemData[folder][index];
         }
         public string[] GetFolders(){

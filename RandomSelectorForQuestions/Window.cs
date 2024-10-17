@@ -18,7 +18,7 @@ namespace RandomSelectorForQuestions
         private Dictionary<string, string[]> problemData;
         private ComboBox comboBoxFolders;
         private Button buttonNext, buttonLocation, buttonReset, buttonSmall, buttonBig;
-        private RichTextBox richTextBoxQuestion; // 替换为 RichTextBox
+        private RichTextBox richTextBoxQuestion;
         private Random random;
         private string dataPath;
 
@@ -40,6 +40,8 @@ namespace RandomSelectorForQuestions
             comboBoxFolders.Location = new System.Drawing.Point(80, 22);
             comboBoxFolders.Size = new System.Drawing.Size(250, 50);
             comboBoxFolders.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxFolders.SelectedIndexChanged += new EventHandler(ComboBoxFolders_SelectedIndexChanged);
+
             this.Controls.Add(comboBoxFolders);
 
             // 初始化 buttonNext
@@ -98,12 +100,12 @@ namespace RandomSelectorForQuestions
             this.Controls.Add(buttonBig);
 
             buttonSmall = new Button();
-            buttonSmall.BackgroundImage = Image.FromFile(@"./src/-.png"); // 设置背景图片
-            buttonSmall.BackgroundImageLayout = ImageLayout.Stretch; // 设置图片填充方式
+            buttonSmall.BackgroundImage = Image.FromFile(@"./src/-.png");
+            buttonSmall.BackgroundImageLayout = ImageLayout.Stretch;
             buttonSmall.Location = new System.Drawing.Point(50, 21);
-            buttonSmall.Size = new System.Drawing.Size(24, 24); // 设置按钮大小（与图片大小一致）
-            buttonSmall.FlatStyle = FlatStyle.Flat; // 设置按钮样式，使其无边框
-            buttonSmall.FlatAppearance.BorderSize = 0; // 去掉按钮边框
+            buttonSmall.Size = new System.Drawing.Size(24, 24); 
+            buttonSmall.FlatStyle = FlatStyle.Flat; 
+            buttonSmall.FlatAppearance.BorderSize = 0; 
             buttonSmall.Click += ButtonSmall_Click;
             this.Controls.Add(buttonSmall);
 
@@ -130,16 +132,21 @@ namespace RandomSelectorForQuestions
                 comboBoxFolders.SelectedIndex = 0; // 默认选择第一个题库
             }
         }
-        
+
+        private void ComboBoxFolders_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedFolder = comboBoxFolders.SelectedItem.ToString().Replace("题库：", "");
+            richTextBoxQuestion.BackColor = System.Drawing.Color.White;
+            richTextBoxQuestion.ForeColor = System.Drawing.Color.Red;
+            richTextBoxQuestion.Font = new System.Drawing.Font("楷体", 16);
+            richTextBoxQuestion.Text = "更换题库为"+ selectedFolder +"！请点击下一题开始作答。";
+        }
 
         private void ButtonNext_Click(object sender, EventArgs e)
         {
             string selectedFolder = comboBoxFolders.SelectedItem.ToString().Replace("题库：", "");
             Console.WriteLine(selectedFolder);
             int problemCount = dataLoader.GetProblemCount(selectedFolder);//获取题库的题目数量
-
-            // 这行代码之后要改成老虎的Rand
-            //int randomIndex = random.Next(0, problemCount);
 
             string question = dataLoader.Get(selectedFolder);
             if(question == "两眼空空")
@@ -155,6 +162,10 @@ namespace RandomSelectorForQuestions
         private void ButtonReset_Click(object sender, EventArgs e)
         {
             dataLoader.ReSet();
+            richTextBoxQuestion.BackColor = System.Drawing.Color.White;
+            richTextBoxQuestion.ForeColor = System.Drawing.Color.Red;
+            richTextBoxQuestion.Font = new System.Drawing.Font("楷体", 16);
+            richTextBoxQuestion.Text = "已完成重置！请点击下一题开始作答。";
         }
         private void ButtonBig_Click(object sender, EventArgs e)
         {
@@ -168,83 +179,125 @@ namespace RandomSelectorForQuestions
         }
 
         int _counter = 0;
-        public void SetText(RichTextBox rtb, string question)
+        public void ShowFormula(RichTextBox rtb, string formula)
         {
-            if (question.Contains("$"))
-            {
+            MathRendererOptions options = new PngMathRendererOptions() { Resolution = 150 };
 
-
-                rtb.Text = "" + Environment.NewLine;
-
-
-                MathRendererOptions options = new PngMathRendererOptions() { Resolution = 150 };
-
-                // 指定序言。
-                options.Preamble = @"\usepackage{amsmath}
+            // 指定序言。
+            options.Preamble = @"\usepackage{amsmath}
                   \usepackage{amsfonts}
                   \usepackage{amssymb}
                   \usepackage{color}
                   ";
 
-                // 指定比例因子 300%。
-                options.Scale = 3000;
-                options.TextColor = System.Drawing.Color.Black;
-                options.BackgroundColor = System.Drawing.Color.White;
-                options.LogStream = new MemoryStream();
-                options.ShowTerminal = true;
-                System.Drawing.SizeF size = new System.Drawing.SizeF();
-                Stream stream;
+            // 指定比例因子 300%。
+            options.Scale = 1000;
+            options.TextColor = System.Drawing.Color.Black;
+            options.BackgroundColor = System.Drawing.Color.White;
+            options.LogStream = new MemoryStream();
+            options.ShowTerminal = true;
+            System.Drawing.SizeF size = new System.Drawing.SizeF();
+            Stream stream;
 
-                _counter += 1;
+            _counter += 1;
 
-                String save_path = Path.Combine(dataPath, @"problems-with-formula", @"math-formula" + _counter.ToString() + ".png");
-                using (stream = File.Open(save_path, FileMode.Create))
-                {
-                    MathRenderer.Render(question, stream, options, out size);
-                }
-                stream.Close();
-
-                Console.WriteLine(_counter.ToString());
-
-                Image formulaImage = Image.FromFile(save_path);
-                IDataObject _data = new DataObject();
-                _data.SetData(formulaImage);
-                Clipboard.SetDataObject(_data, false);
-
-                //rtb.SelectionStart = rtb.Text.Length;
-
-                rtb.Paste();
-                Clipboard.Clear();
-
-            } else
+            
+            String save_path = Path.Combine(dataPath, dataLoader.allfolder, @"math-formula" + _counter.ToString() + ".png");
+            using (stream = File.Open(save_path, FileMode.Create))
             {
-                string picPath = "";
-                if (question.Contains("[IMAGE"))
+                MathRenderer.Render(formula, stream, options, out size);
+            }
+            stream.Close();
+
+            Console.WriteLine(_counter.ToString());
+
+            Image formulaImage = Image.FromFile(save_path);
+            IDataObject _data = new DataObject();
+            _data.SetData(formulaImage);
+            Clipboard.SetDataObject(_data, false);
+
+            rtb.Paste();
+            Clipboard.Clear();
+        }
+
+        public void SetText(RichTextBox rtb, string question)
+        {
+            string picPath = "";
+            if (question.Contains("[IMAGE"))
+            {
+                question = question.Replace("[IMAGE:", "");
+                foreach (var ch in question)
                 {
-                    question = question.Replace("[IMAGE:", "");
-                    foreach (var ch in question)
-                    {
-                        if (ch == ']') break;
-                        else picPath += ch;
-                    }
-                    question = question.Replace(picPath + "]", "");
-                    picPath = Path.GetFullPath(Path.Combine(dataPath, @"problems-with-image", picPath));
-                    Console.WriteLine(picPath);
+                    if (ch == ']') break;
+                    else picPath += ch;
                 }
+                question = question.Replace(picPath + "]", "");
+                picPath = Path.GetFullPath(Path.Combine(dataPath, dataLoader.allfolder, picPath));
+                Console.WriteLine(picPath);
+            }
+            if (question.Contains("$"))
+            {
+                
+                rtb.ForeColor = Color.Blue;
+                rtb.SelectionColor = Color.White;
+                rtb.Font = new Font("楷体", 16);
+                rtb.Text = "";
+                rtb.AppendText("题目：");
+                string text = "";
+                string formula = "";
+                int flag = 0;
+                foreach(var ch in question)
+                {
+                    if (ch == '$')
+                    {
+                        if (flag == 0)
+                        {
+                            //rtb.SelectionStart = rtb.Text.Length;
+                            rtb.AppendText(text);
+                            //Console.WriteLine("!!!T  " + text);
+                            text = "";
+                        }
+                        else
+                        {
+                            //rtb.SelectionStart = rtb.Text.Length;
+                            ShowFormula(rtb, formula);
+                            //Console.WriteLine("!!!F  " + formula);
+                            formula = "";
+                        }
+                        flag = (flag + 1) % 2;
+                    }
+                    else
+                    {
+                        if (flag == 0)
+                        {
+                            text += ch;
+                        }
+                        else
+                        {
+                            formula += ch;
+                        }
+                    }
+
+                }
+                rtb.AppendText(text + Environment.NewLine);
+
+            }
+            else
+            {
                 rtb.Text = "题目：" + question + Environment.NewLine;
                 rtb.ForeColor = Color.Blue;
                 rtb.SelectionColor = Color.White;
                 rtb.Font = new Font("楷体", 16);
-                if (picPath != "")
-                {
-                    Image myImage = Image.FromFile(picPath);
+            }
+            if (picPath != "")
+            {
+                Image myImage = Image.FromFile(picPath);
 
-                    IDataObject data = new DataObject();
-                    data.SetData(myImage);
-                    Clipboard.SetDataObject(data, false);
-                    rtb.SelectionStart = rtb.Text.Length;
-                    rtb.Paste();
-                }
+                IDataObject data = new DataObject();
+                data.SetData(myImage);
+                Clipboard.SetDataObject(data, false);
+                rtb.SelectionStart = rtb.Text.Length;
+                rtb.Paste();
             }
         }
 

@@ -1,4 +1,5 @@
-What is $f(x)=x^n+x^k+x$ divided by $x^2+1$?
-Calculate $f(x)=x^2+x+1=0$, output the answer!
-Calculate the time complexity of $f(x)=(x^n+x)(x^n+x)$
-Calculate the value of $f(x)=x^4+x^2+1$ when $x=233$ 
+请计算：$\iint_D \frac{x}{\sqrt{x^2 + y^2}} \, dx \, dy,\ D=\left\{(x, y) \mid \sqrt{1-y^{2}} \leq x \leq 1,-1 \leq y \leq 1\right\}$
+计算 $f(x)=x^2+x+1=0$ 时，x的值。
+计算时间复杂度： $f(x)=(x^n+x)(x^n+x)$
+$\lim _{x \to 0} \frac{\left(1+a x^{2}\right)^{\sin x}-1}{x^{3}}=6$，请计算a的值。
+[IMAGE:./img/1.png]设函数$f(x)$在区间$(-1, 1)$上有定义，且$\lim _{x \to 0}=0$，则（）
