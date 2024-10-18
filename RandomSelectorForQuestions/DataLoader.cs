@@ -15,8 +15,9 @@ namespace RandomSelectorForQuestions
         int seeds;
         private string myDataFolderPath;
         Dictionary<string, int> suf_count_problemset;
-        
         Dictionary<string, int> used_for_problemset;
+        public string allfolder;
+
         // 构造函数，传入data文件夹路径
         public DataLoader(string dataFolderPath){
             problemData = new Dictionary<string, string[]>();
@@ -75,6 +76,7 @@ namespace RandomSelectorForQuestions
                 }
             }
         }
+
         private void WriteData()
         {
             using (StreamWriter writer = new StreamWriter(Path.Combine(myDataFolderPath, "seeds.txt")))
@@ -86,6 +88,7 @@ namespace RandomSelectorForQuestions
                 }
             }
         }
+
         // 对外接口，获取指定文件夹下指定索引的题目
         private int GetProblemIndex(string folder, int prob)
         {
@@ -143,7 +146,6 @@ namespace RandomSelectorForQuestions
             }
             WriteData();
         }
-        public string allfolder;
         public string Get(string folder){
             int index = -1;
             if (folder == "all")
